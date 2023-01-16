@@ -14320,8 +14320,8 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="Functions-for-Plotting-the-Transformation">Functions for Plotting the Transformation<a class="anchor-link" href="#Functions-for-Plotting-the-Transformation">&#182;</a></h1><p>A function called <code>plotTransformedData(original_df, trans_df, colors, size, limits)</code> was created that accepts two Pandas DataFrames (composed of 2 spatial coordinates each) called <code>original_df</code> and <code>trans_df</code>. Additionally, the <code>plotTransformedData</code> function accepts three other parameters: <code>colors</code>, <code>size</code>, and <code>limits</code>.</p>
 <ul>
-<li>The <code>colors</code> parameter is passed to the <code>scatter</code> function through its <code>c</code> parameter.  The <code>colors</code> parameter is a $(n,3)$ NumPy array, where $n$ is the number of data points and each of the three columns corresponds to an RGB value in the range [0,1]. <em> The first point is black and the last point is red.</em></li>
-<li>The <code>size</code> parameter is passed to the <code>scatter</code> function through its <code>s</code> parameter.  The <code>size</code> parameter controls the size of the marker used to represent the data point, and is a Numpy array of size $(n,)$.  (The np.linspace() was used to create the array).  </li>
+<li>The <code>colors</code> parameter is passed to the <code>scatter</code> function through its <code>c</code> parameter.  The <code>colors</code> parameter is a (n,3) NumPy array, where n is the number of data points and each of the three columns corresponds to an RGB value in the range [0,1]. <em> The first point is black and the last point is red.</em></li>
+<li>The <code>size</code> parameter is passed to the <code>scatter</code> function through its <code>s</code> parameter.  The <code>size</code> parameter controls the size of the marker used to represent the data point, and is a Numpy array of size (n,).  (The np.linspace() was used to create the array).  </li>
 <li>Finally, the <code>limits</code> parameter is a list that looks like this: <code>limits = [xmin, xmax, ymin, ymax]</code>, where the values are the limits for the x and y axes.  These <code>limits</code> values were set to -2.25 and +2.25 for both x and y as limits).</li>
 </ul>
 
@@ -14329,7 +14329,7 @@ a.anchor-link {
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#=================================================================================================================</span>
