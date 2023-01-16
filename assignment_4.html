@@ -14815,13 +14815,13 @@ a.anchor-link {
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="CUSTOM-DATA-TRANSFORMER-IS-CREATED-SO-THAT-IT:">CUSTOM DATA TRANSFORMER IS CREATED SO THAT IT:<a class="anchor-link" href="#CUSTOM-DATA-TRANSFORMER-IS-CREATED-SO-THAT-IT:">&#182;</a></h1><ol>
-<li><p>Adds an attribute to the end of the numerical data (i.e. new last column) that is equal to $\frac{x_1^3}{x_5}$ for each observation.  In other words, for each instance, the $x_1$ column is cube and then divide by the $x_5$ column.</p>
+<li><p>Adds an attribute to the end of the numerical data (i.e. new last column) that is equal to cubed x1 divided by x5 for each observation.  In other words, for each instance, the x1 column is cube and then divide by the x5 column.</p>
 </li>
-<li><p>Drops the entire $x_4$ feature column if the passed function argument <code>drop_x4</code> is <code>True</code> and doesn't drop the column if <code>drop_x4</code> is <code>False</code>.</p>
+<li><p>Drops the entire x4 feature column if the passed function argument <code>drop_x4</code> is <code>True</code> and doesn't drop the column if <code>drop_x4</code> is <code>False</code>.</p>
 </li>
 </ol>
-<p>This <strong>custom transformer class</strong> is named <code>Assignment4Transformer</code>. The class includes an input parameter called <code>drop_x4</code> with a default value of <code>True</code> that deletes the $x_4$ feature column when its value is <code>True</code>, but preserves the $x_4$ feature column when you pass a value of <code>False</code>.</p>
-<p>This transformer will be use in a pipeline. In that pipeline, an imputer will be run <em>before</em> this transformer. The imputer will output an array, so <strong>this transformer was written to accept an array.</strong>  Additionally, this transformer ONLY takes the numerical features of the data. The categorical feature is handled elsewhere in the full pipeline. This means the transformer <strong>reflects the absence of the categorical $x_3$ column</strong> when indexing data structures.</p>
+<p>This <strong>custom transformer class</strong> is named <code>Assignment4Transformer</code>. The class includes an input parameter called <code>drop_x4</code> with a default value of <code>True</code> that deletes the x4 feature column when its value is <code>True</code>, but preserves the x4 feature column when you pass a value of <code>False</code>.</p>
+<p>This transformer will be use in a pipeline. In that pipeline, an imputer will be run <em>before</em> this transformer. The imputer will output an array, so <strong>this transformer was written to accept an array.</strong>  Additionally, this transformer ONLY takes the numerical features of the data. The categorical feature is handled elsewhere in the full pipeline. This means the transformer <strong>reflects the absence of the categorical x3 column</strong> when indexing data structures.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
@@ -14880,7 +14880,7 @@ a.anchor-link {
 <h1 id="TRANSFORMATION-PIPELINE-FOR-NUMERICAL-FEATURES-IS-CREATED-SO-THAT-IT:">TRANSFORMATION PIPELINE FOR NUMERICAL FEATURES IS CREATED SO THAT IT:<a class="anchor-link" href="#TRANSFORMATION-PIPELINE-FOR-NUMERICAL-FEATURES-IS-CREATED-SO-THAT-IT:">&#182;</a></h1><ol>
 <li><p>Applies the <code>SimpleImputer</code> class to the data, where the strategy is set to <code>mean</code>.  The name of this step is "imputer".</p>
 </li>
-<li><p>Applies the custom <code>Assignment4Transformer</code> class to the data.  Custom transformer uses the default argument where the $x_4$ column is drop.  The name of this step is "custom_trans".</p>
+<li><p>Applies the custom <code>Assignment4Transformer</code> class to the data.  Custom transformer uses the default argument where the x4 column is drop.  The name of this step is "custom_trans".</p>
 </li>
 <li><p>Applies the <code>StandardScaler</code> class to the data.  The name of this step is "std_scaler".</p>
 </li>
